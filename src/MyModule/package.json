@@ -1,0 +1,10 @@
+{
+  "name": "mymodule",
+  "version": "0.0.0",
+  "description": "MyModule",
+  "private": true,
+  "gypfile": true,
+  "dependencies": {
+    "nan": "^2.0.0"
+  }
+}
