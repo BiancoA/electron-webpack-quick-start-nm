@@ -27,7 +27,7 @@
       "copies": [
         {
           "files": [ "<(PRODUCT_DIR)/mymoduleND.node" ],
-          "destination": "../src/"
+          "destination": "../main/"
         }
       ]
     }
