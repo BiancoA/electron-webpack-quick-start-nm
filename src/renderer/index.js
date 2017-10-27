@@ -26,7 +26,7 @@ function init() {
       },
       getString(b) {
         ipcRenderer.send("Native-message","it works!");
-        ipcRenderer.on('Native-message-back', (event, data) => {
+        ipcRenderer.once('Native-message-back', (event, data) => {
           console.log("got")
           this.stringNM = data;})
         }
