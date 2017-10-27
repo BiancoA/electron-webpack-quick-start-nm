@@ -13,8 +13,8 @@ The use of the [yarn](https://yarnpkg.com/) package manager is **strongly** reco
 # run application in development mode
 yarn dev
 
-# compile the native module and save the .node file in src/main
-yarn compileND
+# compile the native module and link the new module
+yarn install
 
 # compile source code and create webpack output
 yarn compile
