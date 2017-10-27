@@ -1,7 +1,7 @@
 {
     "targets": [
         {
-            "target_name": "mymoduleND",
+            "target_name": "mymoduleP",
             'cflags!': ['-fno-exceptions'],
             'cflags_cc!': ['-fno-exceptions'],
             'conditions': [
@@ -19,17 +19,6 @@
                 "/usr/local/include/",
                 "/usr/local/include/eigen3"
             ]
-        },
-        {
-        "target_name": "action_after_build",
-      "type": "none",
-      "dependencies": [ "mymoduleND" ],
-      "copies": [
-        {
-          "files": [ "<(PRODUCT_DIR)/mymoduleND.node" ],
-          "destination": "../main/"
         }
-      ]
-    }
     ]
 }

@@ -1,9 +1,10 @@
 {
-  "name": "mymodule",
+  "name": "mymoduleP",
   "version": "0.0.0",
   "description": "MyModule",
   "private": true,
   "gypfile": true,
+  "main": "./build/Release/mymoduleP.node",
   "dependencies": {
     "nan": "^2.0.0"
   }

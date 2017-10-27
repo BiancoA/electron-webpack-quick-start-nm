@@ -2,25 +2,23 @@
   "name": "electron-webpack-quick-start",
   "version": "0.0.0",
   "license": "MIT",
-  "nodeGypRebuild": "true",
   "scripts": {
     "postinstall": "electron-builder install-app-deps",
-    "compileND":"cd src/MyModule/ && HOME=~/.electron-gyp node-gyp rebuild --target=1.7.8 --arch=x64 --dist-url=https://atom.io/download/electron",
+    "install":"cd src/MyModule/ && HOME=~/.electron-gyp node-gyp rebuild --target=1.7.8 --arch=x64 --dist-url=https://atom.io/download/electron",
     "dev": "electron-webpack dev",
     "compile": "electron-webpack",
     "dist": "yarn compile && electron-builder",
     "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
   },
   "dependencies": {
-    "source-map-support": "^0.5.0",
-    "mymoduleND":""
-  },
+    "source-map-support": "^0.5.0"
+    },
   "devDependencies": {
     "node-gyp":"",
-    "electron-gyp":"",
     "electron": "1.7.8",
     "electron-builder": "^19.34.1",
     "electron-webpack": "1.8.0",
-    "webpack": "^3.6.0"
+    "webpack": "^3.6.0",
+    "mymoduleP":"link:./src/MyModule"
   }
 }

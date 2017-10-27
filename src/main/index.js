@@ -1,7 +1,7 @@
 'use strict'
 
-import { app, BrowserWindow } from 'electron'
-import mymoduleND from 'mymoduleND'
+import { app, BrowserWindow,ipcMain } from 'electron'
+import mymoduleP from 'mymoduleP'
 
 const isDevelopment = process.env.NODE_ENV !== 'production'
 
@@ -56,4 +56,13 @@ app.on('activate', () => {
 // Create main BrowserWindow when electron is ready
 app.on('ready', () => {
   mainWindow = createMainWindow()
+  var obj = new mymoduleP.MyModule();
+  obj.Set("it works!");
+  console.log(obj.Get());
+})
+ipcMain.on('Native-message', (event, arg) => {
+  console.log("git")
+  var obj = new mymoduleP.MyModule();
+  obj.Set("it works!");
+  event.sender.send('Native-message-back',obj.Get());
 })
